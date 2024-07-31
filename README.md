@@ -1,27 +1,25 @@
 # FormGroupWrapper
 
+## Description
+Hello everyone!
+
+This is a wrapper for the FormGroup class, which has the following advantages over the usual FormGroup.
+
+## Advantages
+1. Simplifies the typing of controls of the usual FormGroup. It is enough to specify the corresponding interface when initializing the object, for example new FormGroupWrapper<IWaybillForm> and FormGroupWrapper itself will create the necessary types for the corresponding controls (FormControl's)
+2. Highlights the available properties of the object in the methods setValue(), patchValue().
+3. Checks the filling of mandatory fields at the type level (FormGroup only displays an error message in the console, i.e. it is impossible to track the error before compilation).
+4. Allows you to fill in the properties of the FormArray type nested in the formGroup via the methods setValue(), patchValue().
+5. Has a typed getDirtyValues() method, which works almost like a regular getRawValue(), only instead of returning all values, the getDirtyValues() method returns the values ​​of only those fields that have been changed (marked as dirty).
+
+## About project
+
+```node -v``` - v21.7.3
+
+```yarn -v``` - 1.22.22
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.2.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
+## Karma tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
